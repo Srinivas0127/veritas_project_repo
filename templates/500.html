@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Error - Veritas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="error-page">
+            <h1>500</h1>
+            <h2>Internal Server Error</h2>
+            <p>Something went wrong on our end. Please try again later.</p>
+            <a href="{{ url_for('index') }}" class="btn btn-primary">
+                <i class="fas fa-home"></i>
+                Back to Home
+            </a>
+        </div>
+    </div>
+
+    <style>
+        .error-page {
+            text-align: center;
+            padding: 4rem 2rem;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .error-page h1 {
+            font-size: 6rem;
+            color: var(--danger-color);
+            margin-bottom: 1rem;
+        }
+        
+        .error-page h2 {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .error-page p {
+            margin-bottom: 2rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</body>
+</html>
